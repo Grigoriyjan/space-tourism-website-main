@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inconsolata:wght@200..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    --cosmic-white: rgb(208, 214, 249);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Red Hat Display", sans-serif;
+    color: #fff;
+}
+body{
+    background: url('../assets/home/background-home-mobile.jpg') top / cover no-repeat;
+    height: 100vh;
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+a{
+    font-weight: 300;
+    text-decoration: none;
+    font-family: "Inconsolata", monospace;
+}
+p{
+    color: var(--cosmic-white);
+    line-height: 25px;
+}
+.strong{
+    font-weight: 700;
+}
+.container{
+    padding: 30px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 60px;
+    width: 60%;
+    height: 100%;
+    padding: 40px 0 0 30px;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(20px);
+    transition: transform 0.5s ease-in;
+}
+.nav-container.active{
+    transform: translateX(0);
+}
+.close-btn{
+    align-self: flex-end;
+    margin-right: 20px;
+}
+.nav{
+    display: none;
+}
+.nav-humburger{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.nav-link{
+    word-spacing: 7px;
+    font-size: 17px;
+    border-right: 3px solid;
+    border-color: transparent;
+    transition: all 0.3s ease-in;
+}
+.nav-link:hover{
+    border-color: #ffffffb7;
+}
+.nav-link:active{
+    border-color: #fff;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20vh;
+    margin-top: 50px;
+}
+.home_info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+.title{
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 96px;
+}
+.explore-btn{
+    padding: 65px 35px;
+    font-size: 20px;
+    font-family: "Bellefair", serif;
+    border-radius: 50%;
+    background-color: #fff;
+    color: black;
+    outline: 100px solid;
+    outline-color: transparent;
+    transition:outline-color 1s ease, color 1s ease;
+}
+.explore-btn:hover{
+    color: #9C9CA1;
+    
+    outline-color: #ffffff11;
+}
+
+@media (min-width:768px) {
+    body{
+        background: url('../assets/home/background-home-tablet.jpg') center / cover no-repeat;
+    }
+    .humburger{
+        display: none;
+    }
+    .home{
+        margin-top: 150px;
+        gap: 10vh;
+    }
+    .home_info{
+        max-width: 520px;
+    }
+    .title{
+        font-size: 100px;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        gap: 40px;
+        right: 0;
+        top: 0;
+        width: 85%;
+        height: 90px;
+        background: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(20px);
+    }
+    .nav-link{
+        padding-top: 35px;
+        border: none;
+        border-bottom: 3px solid;
+        border-color: transparent;
+    }
+    .explore-btn{
+        font-size: 30px;
+        padding: 115px 75px;
+    }
+}
+
+@media (min-width: 1440px) {
+    body{
+        background: url('../assets/home/background-home-desktop.jpg') center / cover no-repeat;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        position: unset;
+        padding-left: 100px;
+        width: 55%;
+        height: 90px;
+        background: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(20px);
+    }
+    .container{
+        padding: 40px 0 0 60px;
+    }
+    .home{
+        padding-top: 20vh;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 150px;
+        gap: 30vh;
+    }
+    .home_info{
+        max-width: 490px;
+        text-align: left;
+    }
+    .title{
+        font-size: 120px;
+    }
+}
