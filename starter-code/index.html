@@ -11,37 +11,29 @@
 <body>
   <div class="container">
     <header class="header">
-      <img src="./assets/shared/logo.svg" alt="" class="logo_icon">
+      <img src="./assets/shared/logo.svg" alt="#" onclick="loadPage(0)" class="logo_icon">
       <nav class="nav">
-        <a href="" class="nav-link"><span class="strong">00</span> HOME</a>
-        <a href="" class="nav-link"><span class="strong">01</span> DESTINATION</a>
-        <a href="" class="nav-link"><span class="strong">02</span> CREW</a>
-        <a href="" class="nav-link"><span class="strong">03</span> TECHNOLOGY</a>
+        <a class="nav-link" data-index="0"><span class="strong">00</span> HOME</a>
+        <a class="nav-link" data-index="1"><span class="strong">01</span> DESTINATION</a>
+        <a class="nav-link" data-index="2"><span class="strong">02</span> CREW</a>
+        <a class="nav-link" data-index="3"><span class="strong">03</span> TECHNOLOGY</a>
       </nav>
+      <div class="style_line"></div>
       <div class="humburger">
         <button class="humburger-btn"><img src="./assets/shared/icon-hamburger.svg" alt=""></button>
         <div class="nav-container">
           <button class="close-btn"><img src="./assets/shared/icon-close.svg" alt=""></button>
           <nav class="nav-humburger">
-            <a href="" class="nav-link"><span class="strong">00</span> HOME</a>
-            <a href="" class="nav-link"><span class="strong">01</span> DESTINATION</a>
-            <a href="" class="nav-link"><span class="strong">02</span> CREW</a>
-            <a href="" class="nav-link"><span class="strong">03</span> TECHNOLOGY</a>
+            <a class="nav-link" data-index="0"><span class="strong">00</span> HOME</a>
+            <a class="nav-link" data-index="1"><span class="strong">01</span> DESTINATION</a>
+            <a class="nav-link" data-index="2"><span class="strong">02</span> CREW</a>
+            <a class="nav-link" data-index="3"><span class="strong">03</span> TECHNOLOGY</a>
           </nav>
         </div>
       </div>
     </header>
     <div class="content">
-      <div class="home">
-        <div class="home_info">
-          <p>SO, YOU WANT TO TRAVEL TO</p>
-        <h1 class="title">SPACE</h1>
-        <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
-          outer space and not hover kind of on the edge of it. Well sit back, and relax 
-          because we’ll give you a truly out of this world experience!</p>
-        </div>
-        <button class="explore-btn">EXPLORE</button>
-      </div>
+      
     </div>
   </div>
   <!-- 
@@ -54,6 +46,7 @@
   
 
    -->
+  <script src="./js/main.js"></script>
   <script src="./js/hubmurger.js"></script>
 </body>
 </html>

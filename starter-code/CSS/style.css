@@ -12,7 +12,9 @@
     color: #fff;
 }
 body{
-    background: url('../assets/home/background-home-mobile.jpg') top / cover no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 button{
@@ -72,16 +74,17 @@ p{
     gap: 30px;
 }
 .nav-link{
+    cursor: pointer;
     word-spacing: 7px;
     font-size: 17px;
     border-right: 3px solid;
     border-color: transparent;
-    transition: all 0.3s ease-in;
+    transition: border-color 0.3s ease-in;
 }
 .nav-link:hover{
     border-color: #ffffffb7;
 }
-.nav-link:active{
+.nav-link.active{
     border-color: #fff;
 }
 .home{
@@ -110,20 +113,17 @@ p{
     border-radius: 50%;
     background-color: #fff;
     color: black;
-    outline: 100px solid;
-    outline-color: transparent;
-    transition:outline-color 1s ease, color 1s ease;
+    box-shadow: 0 0 0 90px transparent;
+    transition:box-shadow 1s ease, color 0.7s ease;
 }
 .explore-btn:hover{
     color: #9C9CA1;
-    
-    outline-color: #ffffff11;
+    box-shadow: 0 0 0 90px #ffffff1e;
 }
-
+.style_line{
+    display: none;
+}
 @media (min-width:768px) {
-    body{
-        background: url('../assets/home/background-home-tablet.jpg') center / cover no-repeat;
-    }
     .humburger{
         display: none;
     }
@@ -162,9 +162,6 @@ p{
 }
 
 @media (min-width: 1440px) {
-    body{
-        background: url('../assets/home/background-home-desktop.jpg') center / cover no-repeat;
-    }
     .nav{
         display: flex;
         justify-content: space-around;
@@ -191,5 +188,12 @@ p{
     }
     .title{
         font-size: 120px;
+    }
+    .style_line{
+        display: block;
+        position: absolute;
+        width: 40vw;
+        border: 1px solid rgba(255, 255, 255, 0.055);
+        left: 150px;
     }
 }
